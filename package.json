@@ -4,7 +4,8 @@
     "d3": "^7.8.2",
     "date-fns": "^2.29.3",
     "htl": "^0.3.1",
-    "throttle-debounce": "^5.0.0"
+    "throttle-debounce": "^5.0.0",
+    "time-searcher-plus": "^0.0.12"
   },
   "license": "MIT",
   "name": "time-searcher-plus",
