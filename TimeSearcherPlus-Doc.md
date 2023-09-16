@@ -3,8 +3,8 @@ TimeSearcher+ is an interactive temporal data querying widget. Designed for stan
 
 ## Table of Contents
 - src
-  - TimeSearcher.js
-  - Timeline.js
+  - TimeSearcher.js - central widget function with brush and group attributes. Initialization and onChange functions of different components of the TimeSearcher+ widget.
+  - Timeline.js - 
   - TimelineDetails.js
   - TimeLineOverview.js
   - BVH.js
@@ -19,3 +19,6 @@ TimeSearcher+ is an interactive temporal data querying widget. Designed for stan
 - Additional files
   - CODE_OF_CONDUCT.md
   - rollup.config.mjs
+
+## Example usages
+
