@@ -4,10 +4,10 @@ TimeSearcher+ is an interactive temporal data querying widget. Designed for stan
 ## Table of Contents
 - src
   - TimeSearcher.js - central widget function with brush and group attributes. Initialization and onChange functions of different components of the TimeSearcher+ widget.
-  - Timeline.js - 
-  - TimelineDetails.js
-  - TimeLineOverview.js
-  - BVH.js
+  - Timeline.js - Renders a SVG or HTML Canvas element representation of a timeline. Includes customization for various parameters such as width, height, scale etc.
+  - TimelineDetails.js - Renders an enhanced and detailed view of specific components of the timeline in an optimized manner.
+  - TimeLineOverview.js - Renders an overview of the timeline with provisions for selecting and highlighting certain subsets of data.
+  - BVH.js - 
   - BrushInteraction.js
   - BrushTooltipEditable.js
   - utils.js
