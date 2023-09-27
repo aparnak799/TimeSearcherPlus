@@ -44,7 +44,7 @@ Central widget function with brush and group attributes. Initialization and onCh
 18. initDetails({ xDataType, fData })
 19. onSpinboxChange(sourceEvent)
 20. getSpinBoxValues()
-21. onArrowRigth()
+21. onArrowRight()
 22. onArrowLeft()
 23. onArrowDown()
 24. onArrowUp()
@@ -90,7 +90,7 @@ Renders an enhanced and detailed view of specific components of the timeline in 
 Bounding Volume Hierarchy structure (BVH) to query which data lines intersect a given region in the timeline.
 #### Functions and Classes:
 #### Dependencies:
-### BrushInteaction.js
+### BrushInteraction.js
 #### Purpose:
 Defines the interactive behaviors of the brush feature of the widget. These include: movement, selection, grouping etc.
 #### Functions and Classes:

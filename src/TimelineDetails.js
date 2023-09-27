@@ -185,7 +185,7 @@ function TimelineDetails({
   //     .style("fill", "black")
   //     .style("font-size", "0.7em");
 
-  //   g.selectAll(".point") //.select("#points") //TODO make new G with id for this cricles
+  //   g.selectAll(".point") //.select("#points") //TODO make new G with id for this circles
   //     .data(d[1])
   //     .join("circle")
   //     .attr("class", "point")

@@ -101,7 +101,7 @@ function brushInteraction({
     log("💡  onBrushStart", brushObject, arguments.length);
     if (!brushObject || !brushObject.length) {
       // TODO
-      log("🚫 ERRROR onBrushStart called with no or wrong brush", brushObject);
+      log("🚫 ERROR onBrushStart called with no or wrong brush", brushObject);
       return;
     }
 
@@ -197,7 +197,7 @@ function brushInteraction({
       return;
     }
 
-    // dont execute this method when move brushes programatically (sourceEvent === null) or when there is no selection
+    // dont execute this method when move brushes programmatically (sourceEvent === null) or when there is no selection
     if (sourceEvent === undefined || !selection) return;
     //log("brushed", brush);
     brush[1].selection = selection;
@@ -291,7 +291,7 @@ function brushInteraction({
 
   // Move all selected brushes the same amount of the triggerBrush
   function moveSelectedBrushes({ selection, sourceEvent }, trigger) {
-    // dont execute this method when move brushes programatically
+    // dont execute this method when move brushes programmatically
     if (sourceEvent === undefined) return;
     if (!Array.isArray(trigger) || trigger.length !== 2) {
       log(
@@ -522,7 +522,7 @@ function brushInteraction({
           .style("outline-color", darken(computeColor(brush.group)))
           .style("fill", computeColor(brush.group));
 
-        // // if so set the new brush programatically, and delete the initial selection
+        // // if so set the new brush programmatically, and delete the initial selection
         me.moveBrush([id, brush], brush.initialSelection.selectionDomain);
         // d3.select(this).call(
         //   brush.brush.move,

@@ -84,14 +84,14 @@ function TimeLineOverview({
     linem = linem.x((d) => overviewX(d[0])).y((d) => overviewY(d[1]));
   };
 
-  function renderOvwerview(
+  function renderOverview(
     dataSelected,
     dataNotSelected,
     medians,
     hasSelection,
     childSelections = [],
     childPosition,
-    otherSelectionToHightlight
+    otherSelectionToHighlight
   ) {
     dataNotSelected = dataNotSelected ? dataNotSelected : [];
     context.clearRect(0, 0, canvas.node().width, canvas.node().height);
@@ -138,9 +138,9 @@ function TimeLineOverview({
     }); */
 
       // Render Highlighted selection
-      if (otherSelectionToHightlight) {
-        let positionTs = otherSelectionToHightlight.positionTs;
-        let groupId = otherSelectionToHightlight.groupId;
+      if (otherSelectionToHighlight) {
+        let positionTs = otherSelectionToHighlight.positionTs;
+        let groupId = otherSelectionToHighlight.groupId;
         if (
           positionTs !== childPosition &&
           childSelections[positionTs] && // Can be null when start a new Brush
@@ -211,16 +211,16 @@ function TimeLineOverview({
     hasSelection,
     childSelections,
     childPosition,
-    otherSelectionToHightlight
+    otherSelectionToHighlight
   ) {
-    renderOvwerview(
+    renderOverview(
       dataSelected,
       dataNotSelected,
       medians,
       hasSelection,
       childSelections,
       childPosition,
-      otherSelectionToHightlight
+      otherSelectionToHighlight
     );
   };
 

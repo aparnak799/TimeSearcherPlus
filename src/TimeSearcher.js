@@ -104,10 +104,10 @@ function TimeSearcher({
     nGroupsData,
     timelineDetails, // Centralizes the details component
     timelineOverview, // Centralizes the overview component
-    tsElements, // Stores the HTML target of all coneceted TimeSearchers
+    tsElements, // Stores the HTML target of all connected TimeSearchers
     tsElementsSelection, // Stores the selection made by other connectedTimeSearchers
     positionTs, // Stores the position of the current TimeSearcher. 0 is the top.
-    otherSelectionToHightlight, // Determines what group and certain ts level must be highlighted
+    otherSelectionToHighlight, // Determines what group and certain ts level must be highlighted
     brushes;
 
   // Exported Parameters
@@ -245,7 +245,7 @@ function TimeSearcher({
   function onChangeBrushGroupState(id, newState) {
     brushes.changeBrushGroupState(id, newState);
 
-    //Sent event to ohter Ts
+    //Sent event to other Ts
     if (tsElements) {
       let event = new CustomEvent("timeSearcher", {
         detail: {
@@ -581,7 +581,7 @@ function TimeSearcher({
             onAddBrushGroup();
             break;
           case "ArrowRight":
-            onArrowRigth(e);
+            onArrowRight(e);
             break;
           case "ArrowLeft":
             onArrowLeft(e);
@@ -986,7 +986,7 @@ function TimeSearcher({
     return { x0, x1, y0, y1 };
   }
 
-  function onArrowRigth() {
+  function onArrowRight() {
     let selectedBrush = brushes.getSelectedBrush();
     if (selectedBrush === null) return;
 
@@ -1152,7 +1152,7 @@ function TimeSearcher({
       hasSelection,
       mTsElementSelection, // print the selections made by child Elements
       positionTs,
-      otherSelectionToHightlight
+      otherSelectionToHighlight
     );
 
     if (ts.hasDetails) {
@@ -1387,12 +1387,12 @@ function TimeSearcher({
         break;
       case eventType.highlightSelection:
         if (eventData.data) {
-          otherSelectionToHightlight = {
+          otherSelectionToHighlight = {
             positionTs: eventData.data.positionTs,
             groupId: eventData.data.groupId,
           };
         } else {
-          otherSelectionToHightlight = null;
+          otherSelectionToHighlight = null;
         }
         render(renderSelected, renderNotSelected, brushes.hasSelection());
         break;
@@ -1463,7 +1463,7 @@ function TimeSearcher({
     }
     // Filter with the last selection made.
     if (lastWithSelection !== undefined) {
-      // to this beacuse if(0) is false
+      // to this because if(0) is false
       tsElementsSelection[lastWithSelection].forEach((g, gId) => {
         let selectedSet = new Set();
         g.forEach((d) => {
@@ -1674,7 +1674,7 @@ function TimeSearcher({
   // Remove possible previous event listener
   //target.removeEventListener("timeSearcher", onTimeSearcherEvent);
 
-  // Make the ts object accesible
+  // Make the ts object accessible
   divOverview.ts = ts;
   divOverview.details = divDetails;
   divOverview.brushesCoordinates = divBrushesCoordinates;

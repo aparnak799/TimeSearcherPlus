@@ -154,7 +154,7 @@ function BVH({
         [x1, y1],
       ]);
 
-    // Esure that the coordinates are in the limits oh the BVH
+    // Ensure that the coordinates are in the limits oh the BVH
     x1 = Math.min(x1, BVH.width - 1);
     y1 = Math.min(y1, BVH.height - 1);
     x0 = Math.max(x0, 0);
